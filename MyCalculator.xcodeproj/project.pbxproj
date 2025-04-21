@@ -11,6 +11,7 @@
 		DB631EB72DB5861700801C6A /* MyCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EB32DB5861700801C6A /* MyCalculatorApp.swift */; };
 		DB631EBC2DB5865200801C6A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EBB2DB5865200801C6A /* MainView.swift */; };
 		DB631EBE2DB5869500801C6A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EBD2DB5869500801C6A /* Model.swift */; };
+		DB631EC12DB6E45300801C6A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EC02DB6E45300801C6A /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		DB631EB32DB5861700801C6A /* MyCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCalculatorApp.swift; sourceTree = "<group>"; };
 		DB631EBB2DB5865200801C6A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DB631EBD2DB5869500801C6A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		DB631EC02DB6E45300801C6A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			isa = PBXGroup;
 			children = (
 				DB631EB32DB5861700801C6A /* MyCalculatorApp.swift */,
+				DB631EBF2DB6E43D00801C6A /* Extension */,
 				DB631EBA2DB5864100801C6A /* Views */,
 				DB631EB82DB5861B00801C6A /* Model */,
 				DB631EB02DB5861700801C6A /* Assets.xcassets */,
@@ -75,6 +78,14 @@
 				DB631EBB2DB5865200801C6A /* MainView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		DB631EBF2DB6E43D00801C6A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				DB631EC02DB6E45300801C6A /* Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,6 +163,7 @@
 				DB631EBE2DB5869500801C6A /* Model.swift in Sources */,
 				DB631EBC2DB5865200801C6A /* MainView.swift in Sources */,
 				DB631EB72DB5861700801C6A /* MyCalculatorApp.swift in Sources */,
+				DB631EC12DB6E45300801C6A /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

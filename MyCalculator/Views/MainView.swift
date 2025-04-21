@@ -2,10 +2,15 @@ import SwiftUI
 
 struct MainView: View {
     
+    // MARK: Property
+    @State private var value = "0"
+    @State private var number: Double = 0.0
+    @State private var currentOperation: Operation = .none
+    
     let buttonsArray: [[Buttons]] = [
         [.clear, .negative, .percent, .divide],
         [.seven, .eight, .nine, .multiply],
-        [.four, .five, .six, .minul],
+        [.four, .five, .six, .minus],
         [.one, .two, .three, .plus],
         [.zero, .decimal, .equal]
     ]
@@ -23,7 +28,7 @@ struct MainView: View {
                 // MARK: Display
                 HStack {
                     Spacer()
-                    Text("0")
+                    Text(value)
                         .foregroundColor(.white)
                         .font(.system(size: 90))
                         .fontWeight(.light)
@@ -35,7 +40,7 @@ struct MainView: View {
                     HStack(spacing: 12) {
                         ForEach(row, id: \.self) { item in
                             Button {
-                                
+                                self.didTap(item: item)
                             } label: {
                                 Text(item.rawValue)
                                     .frame(width: self.buttonWidth(item: item), height: self.buttonHeight())
@@ -50,6 +55,61 @@ struct MainView: View {
             }
             .padding(.bottom)
         }
+    }
+    
+    // MARK: Tap Button Method
+    func didTap(item: Buttons) {
+        switch item {
+        case .plus, .minus, .multiply, .divide:
+            currentOperation = item.ButtonToOperation()
+            number = Double(value) ?? 0
+            value = "0"
+        case .equal:
+            if let currentValue = Double(value) {
+                value = formatResult(performOperation(currentValue))
+            }
+        case .decimal:
+            if !value.contains(".") {
+                value += "."
+            }
+        case .percent:
+            if let currentValue = Double(value) {
+                value = formatResult(currentValue / 100)
+            }
+        case .negative:
+            if let currentValue = Double(value) {
+                value = formatResult(-currentValue)
+            }
+        case .clear:
+            value = "0"
+        default:
+            if value == "0" {
+                value = item.rawValue
+            } else {
+                value += item.rawValue
+            }
+        }
+    }
+    
+    // MARK: Helper Calculate Method
+    func performOperation(_ currentValue: Double) -> Double {
+        switch currentOperation {
+        case .addition:
+            return number + currentValue
+        case .subtract:
+            return number - currentValue
+        case .multiply:
+            return number * currentValue
+        case .divide:
+            return number / currentValue
+        default:
+            return currentValue
+        }
+    }
+    
+    // MARK: Remove last zero Method
+    func formatResult(_ result: Double) -> String {
+        return String(format: "%g", result)
     }
     
     // MARKL Size of Buttons Methods

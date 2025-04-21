@@ -1,5 +1,9 @@
 import SwiftUI
 
+enum Operation {
+    case addition, subtract, multiply, divide, none
+}
+
 enum Buttons: String {
     case zero = "0"
     case one = "1"
@@ -12,7 +16,7 @@ enum Buttons: String {
     case eight = "8"
     case nine = "9"
     case plus = "+"
-    case minul = "-"
+    case minus = "-"
     case multiply = "x"
     case divide = "/"
     case equal = "="
@@ -25,7 +29,7 @@ enum Buttons: String {
         switch self {
         case .clear, .negative, .percent:
             return Color.grayCalc
-        case .divide, .multiply, .minul, .plus, .equal:
+        case .divide, .multiply, .minus, .plus, .equal:
             return Color.orangeCalc
         default:
             return Color.darkGrayCalc
