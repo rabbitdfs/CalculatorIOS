@@ -12,6 +12,7 @@
 		DB631EBC2DB5865200801C6A /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EBB2DB5865200801C6A /* MainView.swift */; };
 		DB631EBE2DB5869500801C6A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EBD2DB5869500801C6A /* Model.swift */; };
 		DB631EC12DB6E45300801C6A /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EC02DB6E45300801C6A /* Extension.swift */; };
+		DB631EC52DB6EBC700801C6A /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB631EC42DB6EBC700801C6A /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		DB631EBB2DB5865200801C6A /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		DB631EBD2DB5869500801C6A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		DB631EC02DB6E45300801C6A /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		DB631EC42DB6EBC700801C6A /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			isa = PBXGroup;
 			children = (
 				DB631EB32DB5861700801C6A /* MyCalculatorApp.swift */,
+				DB631EC22DB6EB3E00801C6A /* ViewModel */,
 				DB631EBF2DB6E43D00801C6A /* Extension */,
 				DB631EBA2DB5864100801C6A /* Views */,
 				DB631EB82DB5861B00801C6A /* Model */,
@@ -86,6 +89,14 @@
 				DB631EC02DB6E45300801C6A /* Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		DB631EC22DB6EB3E00801C6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				DB631EC42DB6EBC700801C6A /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -160,6 +171,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DB631EC52DB6EBC700801C6A /* ViewModel.swift in Sources */,
 				DB631EBE2DB5869500801C6A /* Model.swift in Sources */,
 				DB631EBC2DB5865200801C6A /* MainView.swift in Sources */,
 				DB631EB72DB5861700801C6A /* MyCalculatorApp.swift in Sources */,
